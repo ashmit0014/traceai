@@ -139,8 +139,20 @@ The provider must support OpenAI-compatible `/chat/completions` with function ca
 
 ## Screenshots
 
-After starting the app, capture the dashboard at 1440 × 1000, run the checkout investigation and capture its completed report, then capture the Metrics and Evaluations pages. Save images under `docs/screenshots/` and add their Markdown image links here when publishing your repository. Use demo mode for reproducible screenshots; do not include environment secrets.
+Captured from the running application in Demo Mode using seeded ShopFlow evidence. Demo evaluation results show fixture keyword checks, not measured AI accuracy.
 
-## Resume bullet
+### Dashboard
 
-Built TraceAI, a full-stack AI incident investigator using Next.js, TypeScript, Prisma, and SQLite, with a bounded six-tool agent, streamed evidence-backed reports, citation validation, and an eight-scenario evaluation harness tracking fixture keyword checks, citation validity, latency, and token usage.
+![TraceAI dashboard with service health, checkout latency, and fixture keyword checks](docs/screenshots/dashboard.jpg)
+
+### Completed investigation
+
+![Completed checkout investigation with the N+1 diagnosis, cited evidence, and activity timeline](docs/screenshots/investigation.jpg)
+
+### Metrics
+
+![Checkout latency, database queries, and request rate around deployment v1.42](docs/screenshots/metrics.jpg)
+
+### Evaluations
+
+![Eight demo scenarios with explicitly labeled keyword checks and source reference validity](docs/screenshots/evaluations.jpg)
