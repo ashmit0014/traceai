@@ -1,0 +1,43 @@
+{
+  "name": "traceai",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build",
+    "start": "next start --hostname 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "seed": "tsx prisma/seed.ts",
+    "postinstall": "prisma generate",
+    "format": "prettier --write app components lib data prisma/seed.ts tests *.ts *.json *.mjs README.md",
+    "format:check": "prettier --check app components lib data prisma/seed.ts tests *.ts *.json *.mjs README.md"
+  },
+  "dependencies": {
+    "@prisma/client": "6.19.0",
+    "lucide-react": "^0.468.0",
+    "next": "^15.5.12",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "recharts": "^3.0.0",
+    "server-only": "^0.0.1",
+    "zod": "^3.25.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.0",
+    "@types/node": "^22.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "prettier": "^3.9.6",
+    "prisma": "6.19.0",
+    "tailwindcss": "^4.1.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.8.0",
+    "vitest": "^4.1.11"
+  },
+  "overrides": {
+    "postcss": "^8.5.28",
+    "effect": "^3.22.2",
+    "deepmerge-ts": "^8.0.2"
+  }
+}

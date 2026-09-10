@@ -1,0 +1,49 @@
+generator client {
+  provider = "prisma-client-js"
+}
+datasource db {
+  provider = "sqlite"
+  url = env("DATABASE_URL")
+}
+model Scenario {
+  id String @id
+  title String
+  description String
+  service String @default("checkout-service")
+  severity String @default("high")
+  expected String
+  keywords String
+  evidence String
+  incidents Incident[]
+}
+model Incident {
+  id String @id @default(cuid())
+  title String
+  description String
+  service String @default("checkout-service")
+  severity String @default("high")
+  status String @default("open")
+  scenarioId String
+  scenario Scenario @relation(fields: [scenarioId], references: [id])
+  createdAt DateTime @default(now())
+  investigations Investigation[]
+}
+model Investigation {
+  id String @id @default(cuid())
+  incidentId String
+  incident Incident @relation(fields: [incidentId], references: [id])
+  status String @default("running")
+  mode String
+  result String?
+  activity String @default("[]")
+  error String?
+  durationMs Int @default(0)
+  tokens Int?
+  createdAt DateTime @default(now())
+}
+model Evaluation {
+  id String @id @default(cuid())
+  mode String
+  results String
+  createdAt DateTime @default(now())
+}
