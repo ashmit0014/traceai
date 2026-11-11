@@ -1,3 +1,8 @@
+<!-- profile-editorial-cover -->
+<picture>
+  <img src=".github/project-cover.png" alt="traceai by Ashmit Kundu" width="100%" />
+</picture>
+
 # TraceAI
 
 An AI-powered production incident investigator that connects logs, metrics, deployments, and code to an evidence-backed root-cause report.
