@@ -1,11 +1,8 @@
-<!-- profile-editorial-cover -->
-<picture>
-  <img src=".github/project-cover.png" alt="traceai by Ashmit Kundu" width="100%" />
-</picture>
-
 # TraceAI
 
 An AI-powered production incident investigator that connects logs, metrics, deployments, and code to an evidence-backed root-cause report.
+
+> **How this was made.** TraceAI was generated in a single pass by an AI model (GPT-6 Astra) from one prompt I wrote: the app, the tests, the evaluation harness and this README. I keep it public as a record of what one-shot generation can produce today, not as hand-written work. Treat it as a generated prototype.
 
 ## Demo
 
@@ -13,7 +10,7 @@ Open **ShopFlow → Checkout latency regression → Investigate**. Checkout p95 
 
 No account or API key is required. The visible **Demo Mode** badge means a deterministic investigator is executing the same allowlisted evidence tools. It does not call an LLM. Its 87% confidence is illustrative, not a calibrated probability. Add a provider key to run actual model-directed tool calling; provider errors never silently fall back to demo.
 
-## Why I built this
+## The idea
 
 Production incidents rarely explain themselves in a single dashboard. Engineers move between traces, graphs, release history, and source code while maintaining competing explanations in their heads. TraceAI makes that workflow inspectable: it records the evidence retrieved, validates the final report, and lets a reviewer follow every citation back to its source.
 
